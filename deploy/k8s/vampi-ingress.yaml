@@ -1,15 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  labels:
-    io.kompose.service: vampi-demo
-    com.noname.alanc.vampi/vulnerable: true
-    com.noname.alanc.traffic/send: true
-  name: vampi-demo-ingress
+  name: vampi-demo
   namespace: alanc-vampi
   annotations:
     nginx.org/client-max-body-size: "2000m"
-    alb.ingress.kubernetes.io/load-balancer-name: "alanc-vampi-demo-alb-3e3c177a72e7"
+    alb.ingress.kubernetes.io/load-balancer-name: "alanc-vampi-demo-alb-rc1"
     alb.ingress.kubernetes.io/scheme: "internet-facing"
     alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-east-1:491489166083:certificate/81d5b9d0-ad15-4ae9-a2f3-0d7e37a46461"
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
@@ -25,6 +21,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: vampi-demo-svc
+            name: vampi-demo
             port:
               number: 5000

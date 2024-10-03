@@ -4,4 +4,4 @@ metadata:
   name: vampi-demo-configmap
   namespace: alanc-vampi
 data:
-  vulnerable: 1
+  vulnerable: "1"
