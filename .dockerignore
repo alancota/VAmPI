@@ -6,3 +6,4 @@ docker-compose.yaml
 .idea/
 .run/
 .github/
+.deploy/

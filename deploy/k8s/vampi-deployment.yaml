@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    com.noname.alanc.vampi/vulnerable: "true"
+    com.noname.alanc.traffic/send: "true"
+  name: vampi-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vampi-demo
+  template:
+    metadata:
+      labels:
+        app: vampi-demo
+    spec:
+      containers:
+      - name: vampi-demo
+        image: 491489166083.dkr.ecr.us-east-1.amazonaws.com/alanc/vampi:latest
+        imagePullPolicy: Always
+        envFrom:
+          - configMapRef:
+              name: vampi-demo-configmap
+        ports:
+          - containerPort: 5000
+            protocol: TCP
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+      imagePullSecrets:
+        - name: regcred

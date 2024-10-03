@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: vampi-demo
+    com.noname.alanc.vampi/vulnerable: "true"
+  name: vampi-demo
+  namespace: alanc-vampi
+spec:
+  ports:
+    - name: "vampi"
+      port: 5000
+  selector:
+    app: vampi-demo

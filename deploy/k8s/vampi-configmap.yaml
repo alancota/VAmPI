@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vampi-demo-configmap
+  namespace: alanc-vampi
+data:
+  vulnerable: "1"
