@@ -2,3 +2,7 @@ Dockerfile
 .dockerignore
 README.md
 docker-compose.yaml
+._.*
+.idea/
+.run/
+.github/

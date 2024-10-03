@@ -2,7 +2,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-
+# Feature: new .envs directory
+.envrc
+.envs/*
+!.envs/.local/
 
 # Distribution / packaging
 .Python
