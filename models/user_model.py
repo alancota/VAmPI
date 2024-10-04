@@ -96,6 +96,15 @@ class User(db.Model):
 
     @staticmethod
     def init_db_users():
-        User.register_user("name1", "pass1", "mail1@mail.com", False)
-        User.register_user("name2", "pass2", "mail2@mail.com", False)
-        User.register_user("admin", "pass1", "admin@mail.com", True)
+        User.register_user("admin", "P@ssword1", "admin@malanclab.net", True)
+        User.register_user("itguy", "P@ssword1", "it-guy@alanclab.net", True)
+        User.register_user("michaelscott", "P@ssword1", "michaelscott@alanclab.net", False)
+        User.register_user("dwightschrute", "P@ssword1", "dwightschrute@alanclab.net", False)
+        User.register_user("jimhalpert", "P@ssword1", "jimhalpert@alanclab.net", False)
+        User.register_user("pambeesly", "P@ssword1", "pambeesly@alanclab.net", False)
+        User.register_user("angelaoscar", "P@ssword1", "angelaoscar@alanclab.net", False)
+        User.register_user("kevinmalone", "P@ssword1", "kevinmalone@alanclab.net", False)
+        User.register_user("ryanhoward", "P@ssword1", "ryanhoward@alanclab.net", False)
+        User.register_user("andybernard", "P@ssword1", "andybernard@alanclab.net", False)
+        User.register_user("stanleyhudson", "P@ssword1", "stanleyhudson@alanclab.net", False)
+        User.register_user("creedbratton", "P@ssword1", "creedbratton@alanclab.net", False)
