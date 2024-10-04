@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "6824c0d7-2ef1-4faa-a890-fc05f7717f2e",
+		"name": "VAmPI Demo Active Testing michaelscott Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "906111"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"{{VAmPI-Testuser-1}}\",\n    \"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{vampiUrl}}/users/v1/login",
+					"host": [
+						"{{vampiUrl}}"
+					],
+					"path": [
+						"users",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
