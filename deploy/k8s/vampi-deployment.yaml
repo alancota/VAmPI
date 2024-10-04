@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: vampi-demo
-        image: 491489166083.dkr.ecr.us-east-1.amazonaws.com/alanc/vampi:latest
+        image: 491489166083.dkr.ecr.us-east-1.amazonaws.com/alanc/vampi:rc2
         imagePullPolicy: Always
         envFrom:
           - configMapRef:
