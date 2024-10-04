@@ -5,7 +5,7 @@ on:
     branches: [ demo ]
 
 env:
-  IMAGE_TAG: latest
+  IMAGE_TAG: rc2
   K8S_CLUSTER_NAME: sa-eks
   K8S_NAMESPACE: alanc-vampi
 
