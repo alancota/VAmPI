@@ -6,7 +6,7 @@
     {
       "name": "OAS",
       "openApi": {
-        "sourcePath": "/openapi_specs/openapi3.yml"
+        "sourcePath": "/noname/openapi_specs/openapi3.yml"
       },
       "auth_mappings": []
     }

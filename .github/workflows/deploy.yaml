@@ -35,9 +35,10 @@ jobs:
         run: >
           docker run
           --add-host=host.docker.internal:host-gateway
-          -e ACTIVE_CONFIG_FILE_PATH=/active_testing/active-config.json
+          -e ACTIVE_CONFIG_FILE_PATH=/noname/active_testing/active-config.json
           -e ACTIVE_BACKEND_URI=${{ secrets.ACTIVE_BACKEND_URI }}
-          -v $(pwd)/noname:/noname
+          -v $(pwd)active_testing:/noname/active_testing
+          -v $(pwd)openapi_specs:/noname/openapi_specs
           ${{ secrets.ACTIVE_REGISTRY_URL }}/active-cli:$(curl -k ${{ secrets.ACTIVE_API_URL }}/backend/version) scan
           --api-url=${{ secrets.ACTIVE_API_URL }}
           --api-token=${{ secrets.ACTIVE_API_TOKEN }}
