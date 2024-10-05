@@ -1,7 +1,7 @@
 {
   "version": "1.1.0",
   "applicationId": "e5ff1fa9-fb48-4fbc-b795-5937ea46ee81",
-  "host": "http://localhost:5002",
+  "host": "http://host.docker.internal:5002",
   "sources": [
     {
       "name": "OAS",
