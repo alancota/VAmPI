@@ -1,0 +1,60 @@
+{
+  "version": "1.1.0",
+  "applicationId": "e5ff1fa9-fb48-4fbc-b795-5937ea46ee81",
+  "host": "http://localhost:5002",
+  "sources": [
+    {
+      "name": "OAS",
+      "openApi": {
+        "sourcePath": "/openapi_specs/openapi3.yml"
+      },
+      "auth_mappings": []
+    }
+  ],
+  "auths": [
+    {
+      "name": "Michael Scott",
+      "role": "reader / writer",
+      "mappings": [
+        {
+          "type": "header",
+          "value": "Bearer {{Michael Scott}}",
+          "key": "Authorization"
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "role": "admin",
+      "mappings": [
+        {
+          "type": "header",
+          "value": "Bearer {{IT Guy}}",
+          "key": "Authorization"
+        }
+      ]
+    }
+  ],
+  "app": {
+    "secrets": [
+      {
+        "name": "Michael Scott",
+        "type": "postman",
+        "data": {
+          "collection": "{\"info\":{\"_postman_id\":\"6824c0d7-2ef1-4faa-a890-fc05f7717f2e\",\"name\":\"VAmPI Demo Active Testing michaelscott Login\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"906111\"},\"item\":[{\"name\":\"Login\",\"request\":{\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"username\\\": \\\"{{VAmPI-Testuser-1}}\\\",\\n    \\\"password\\\": \\\"{{password}}\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"{{vampiUrl}}/users/v1/login\",\"host\":[\"{{vampiUrl}}\"],\"path\":[\"users\",\"v1\",\"login\"]}},\"response\":[]}]}",
+          "environment": "{\"id\":\"69bd6690-0bac-4478-9946-452e2b997c45\",\"name\":\"VAmPI Demo - Active Testing CI/CD\",\"values\":[{\"key\":\"VAmPI-Testuser-1\",\"value\":\"michaelscott\",\"type\":\"default\",\"enabled\":true},{\"key\":\"VAmPI-Admin-1\",\"value\":\"admin\",\"type\":\"default\",\"enabled\":true},{\"key\":\"password\",\"value\":\"P@ssword1\",\"type\":\"secret\",\"enabled\":true},{\"key\":\"vampiUrl\",\"value\":\"https://vampi.alanclab.net\",\"type\":\"default\",\"enabled\":true}],\"_postman_variable_scope\":\"environment\",\"_postman_exported_at\":\"2024-10-04T21:58:49.432Z\",\"_postman_exported_using\":\"Postman/11.15.0\"}",
+          "sourceBody": "$.auth_token"
+        }
+      },
+      {
+        "name": "IT Guy",
+        "type": "postman",
+        "data": {
+          "collection": "{\"info\":{\"_postman_id\":\"8f326dbf-48c8-4be5-a1d2-5209d5f90876\",\"name\":\"VAmPI Demo Active Testing Admin Login\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"906111\"},\"item\":[{\"name\":\"Login\",\"request\":{\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"username\\\": \\\"{{VAmPI-Admin-1}}\\\",\\n    \\\"password\\\": \\\"{{password}}\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"{{vampiUrl}}/users/v1/login\",\"host\":[\"{{vampiUrl}}\"],\"path\":[\"users\",\"v1\",\"login\"]}},\"response\":[]}]}",
+          "environment": "{\"id\":\"69bd6690-0bac-4478-9946-452e2b997c45\",\"name\":\"VAmPI Demo - Active Testing CI/CD\",\"values\":[{\"key\":\"VAmPI-Testuser-1\",\"value\":\"michaelscott\",\"type\":\"default\",\"enabled\":true},{\"key\":\"VAmPI-Admin-1\",\"value\":\"admin\",\"type\":\"default\",\"enabled\":true},{\"key\":\"password\",\"value\":\"P@ssword1\",\"type\":\"secret\",\"enabled\":true},{\"key\":\"vampiUrl\",\"value\":\"https://vampi.alanclab.net\",\"type\":\"default\",\"enabled\":true}],\"_postman_variable_scope\":\"environment\",\"_postman_exported_at\":\"2024-10-04T21:58:49.432Z\",\"_postman_exported_using\":\"Postman/11.15.0\"}",
+          "sourceBody": "$.auth_token"
+        }
+      }
+    ]
+  }
+}
