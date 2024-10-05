@@ -107,4 +107,4 @@ class User(db.Model):
         User.register_user("ryanhoward", "P@ssword1", "ryanhoward@alanclab.net", False)
         User.register_user("andybernard", "P@ssword1", "andybernard@alanclab.net", False)
         User.register_user("stanleyhudson", "P@ssword1", "stanleyhudson@alanclab.net", False)
-        User.register_user("creedbratton", "P@ssword1", "creedbratton@alanclab.net", False)
+        # User.register_user("creedbratton", "P@ssword1", "creedbratton@alanclab.net", False)
